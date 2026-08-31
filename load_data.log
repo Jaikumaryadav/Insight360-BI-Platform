@@ -1,0 +1,250 @@
+2026-08-06 12:37:56 | INFO     | ======================================================================
+2026-08-06 12:37:56 | INFO     | Insight360 Phase 4 — Data Load Starting
+2026-08-06 12:37:56 | INFO     | Data directory: C:\Users\madhu\Downloads\Insight360-BI-Platform\data\raw
+2026-08-06 12:37:56 | INFO     | Target schema : public
+2026-08-06 12:37:56 | INFO     | ======================================================================
+2026-08-06 12:37:56 | ERROR    | Data directory does not exist: C:\Users\madhu\Downloads\Insight360-BI-Platform\data\raw
+2026-08-06 12:39:06 | INFO     | ======================================================================
+2026-08-06 12:39:06 | INFO     | Insight360 Phase 4 — Data Load Starting
+2026-08-06 12:39:06 | INFO     | Data directory: C:\Users\madhu\Downloads\Insight360-BI-Platform
+2026-08-06 12:39:06 | INFO     | Target schema : public
+2026-08-06 12:39:06 | INFO     | ======================================================================
+2026-08-06 12:39:06 | INFO     | Connected to database 'insight360_db' on 127.0.0.1:5432 as user 'postgres'
+2026-08-06 12:39:06 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:06 | INFO     | Loading dim_date.csv -> public.dim_date
+2026-08-06 12:39:06 | INFO     |   Source CSV row count: 730
+2026-08-06 12:39:06 | ERROR    |   ERROR loading dim_date: relation "public.dim_date" does not exist
+
+2026-08-06 12:39:06 | ERROR    |   Transaction rolled back for dim_date (elapsed 0.01s)
+2026-08-06 12:39:06 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:06 | INFO     | Loading dim_store.csv -> public.dim_store
+2026-08-06 12:39:06 | INFO     |   Source CSV row count: 216
+2026-08-06 12:39:06 | ERROR    |   ERROR loading dim_store: relation "public.dim_store" does not exist
+
+2026-08-06 12:39:06 | ERROR    |   Transaction rolled back for dim_store (elapsed 0.00s)
+2026-08-06 12:39:06 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:06 | INFO     | Loading dim_product.csv -> public.dim_product
+2026-08-06 12:39:06 | INFO     |   Source CSV row count: 4,200
+2026-08-06 12:39:06 | ERROR    |   ERROR loading dim_product: relation "public.dim_product" does not exist
+
+2026-08-06 12:39:06 | ERROR    |   Transaction rolled back for dim_product (elapsed 0.00s)
+2026-08-06 12:39:06 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:06 | INFO     | Loading dim_customer.csv -> public.dim_customer
+2026-08-06 12:39:08 | INFO     |   Source CSV row count: 850,000
+2026-08-06 12:39:08 | ERROR    |   ERROR loading dim_customer: relation "public.dim_customer" does not exist
+
+2026-08-06 12:39:08 | ERROR    |   Transaction rolled back for dim_customer (elapsed 0.00s)
+2026-08-06 12:39:08 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:08 | INFO     | Loading fact_sales.csv -> public.fact_sales
+2026-08-06 12:39:14 | INFO     |   Source CSV row count: 4,200,000
+2026-08-06 12:39:14 | ERROR    |   ERROR loading fact_sales: relation "public.fact_sales" does not exist
+
+2026-08-06 12:39:14 | ERROR    |   Transaction rolled back for fact_sales (elapsed 0.00s)
+2026-08-06 12:39:14 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:14 | INFO     | Loading fact_returns.csv -> public.fact_returns
+2026-08-06 12:39:14 | INFO     |   Source CSV row count: 220,000
+2026-08-06 12:39:14 | ERROR    |   ERROR loading fact_returns: relation "public.fact_returns" does not exist
+
+2026-08-06 12:39:14 | ERROR    |   Transaction rolled back for fact_returns (elapsed 0.00s)
+2026-08-06 12:39:14 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:14 | INFO     | Loading fact_inventory_snapshot.csv -> public.fact_inventory_snapshot
+2026-08-06 12:39:15 | INFO     |   Source CSV row count: 968,188
+2026-08-06 12:39:15 | ERROR    |   ERROR loading fact_inventory_snapshot: relation "public.fact_inventory_snapshot" does not exist
+
+2026-08-06 12:39:15 | ERROR    |   Transaction rolled back for fact_inventory_snapshot (elapsed 0.00s)
+2026-08-06 12:39:15 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:39:15 | INFO     | Loading fact_staffing.csv -> public.fact_staffing
+2026-08-06 12:39:15 | INFO     |   Source CSV row count: 11,128
+2026-08-06 12:39:15 | ERROR    |   ERROR loading fact_staffing: relation "public.fact_staffing" does not exist
+
+2026-08-06 12:39:15 | ERROR    |   Transaction rolled back for fact_staffing (elapsed 0.00s)
+2026-08-06 12:39:15 | INFO     | Database connection closed.
+2026-08-06 12:39:15 | INFO     | ======================================================================
+2026-08-06 12:39:15 | INFO     | LOAD SUMMARY
+2026-08-06 12:39:15 | INFO     | ======================================================================
+2026-08-06 12:39:15 | INFO     | Table                       Status            CSV Rows       DB Rows  Time (s)
+2026-08-06 12:39:15 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:39:15 | INFO     | dim_date                    FAILED                 730             0      0.01
+2026-08-06 12:39:15 | INFO     | dim_store                   FAILED                 216             0      0.00
+2026-08-06 12:39:15 | INFO     | dim_product                 FAILED               4,200             0      0.00
+2026-08-06 12:39:15 | INFO     | dim_customer                FAILED             850,000             0      0.00
+2026-08-06 12:39:15 | INFO     | fact_sales                  FAILED           4,200,000             0      0.00
+2026-08-06 12:39:15 | INFO     | fact_returns                FAILED             220,000             0      0.00
+2026-08-06 12:39:15 | INFO     | fact_inventory_snapshot     FAILED             968,188             0      0.00
+2026-08-06 12:39:15 | INFO     | fact_staffing               FAILED              11,128             0      0.00
+2026-08-06 12:39:15 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:39:15 | INFO     | TOTAL                                                              0      0.02
+2026-08-06 12:39:15 | INFO     | ======================================================================
+2026-08-06 12:39:15 | WARNING  | ONE OR MORE TABLES FAILED OR HAVE ROW COUNT MISMATCHES.
+2026-08-06 12:39:15 | WARNING  | Review the log above and re-run failed tables as needed.
+2026-08-06 12:39:15 | INFO     | Total run time: 9.11s
+2026-08-06 12:40:11 | INFO     | ======================================================================
+2026-08-06 12:40:11 | INFO     | Insight360 Phase 4 — Data Load Starting
+2026-08-06 12:40:11 | INFO     | Data directory: C:\Users\madhu\Downloads\Insight360-BI-Platform
+2026-08-06 12:40:11 | INFO     | Target schema : insight360
+2026-08-06 12:40:11 | INFO     | ======================================================================
+2026-08-06 12:40:11 | INFO     | Connected to database 'insight360_db' on 127.0.0.1:5432 as user 'postgres'
+2026-08-06 12:40:11 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:11 | INFO     | Loading dim_date.csv -> insight360.dim_date
+2026-08-06 12:40:11 | INFO     |   Source CSV row count: 730
+2026-08-06 12:40:11 | INFO     |   Truncated insight360.dim_date before load
+2026-08-06 12:40:11 | ERROR    |   ERROR loading dim_date: column "fiscal_year" of relation "dim_date" does not exist
+
+2026-08-06 12:40:11 | ERROR    |   Transaction rolled back for dim_date (elapsed 0.12s)
+2026-08-06 12:40:11 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:11 | INFO     | Loading dim_store.csv -> insight360.dim_store
+2026-08-06 12:40:11 | INFO     |   Source CSV row count: 216
+2026-08-06 12:40:11 | INFO     |   Truncated insight360.dim_store before load
+2026-08-06 12:40:11 | ERROR    |   ERROR loading dim_store: column "sqft" of relation "dim_store" does not exist
+
+2026-08-06 12:40:11 | ERROR    |   Transaction rolled back for dim_store (elapsed 0.08s)
+2026-08-06 12:40:11 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:11 | INFO     | Loading dim_product.csv -> insight360.dim_product
+2026-08-06 12:40:11 | INFO     |   Source CSV row count: 4,200
+2026-08-06 12:40:11 | INFO     |   Truncated insight360.dim_product before load
+2026-08-06 12:40:11 | ERROR    |   ERROR loading dim_product: column "sku_name" of relation "dim_product" does not exist
+
+2026-08-06 12:40:11 | ERROR    |   Transaction rolled back for dim_product (elapsed 0.10s)
+2026-08-06 12:40:11 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:11 | INFO     | Loading dim_customer.csv -> insight360.dim_customer
+2026-08-06 12:40:12 | INFO     |   Source CSV row count: 850,000
+2026-08-06 12:40:12 | INFO     |   Truncated insight360.dim_customer before load
+2026-08-06 12:40:13 | ERROR    |   ERROR loading dim_customer: column "loyalty_id" of relation "dim_customer" does not exist
+
+2026-08-06 12:40:13 | ERROR    |   Transaction rolled back for dim_customer (elapsed 0.64s)
+2026-08-06 12:40:13 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:13 | INFO     | Loading fact_sales.csv -> insight360.fact_sales
+2026-08-06 12:40:19 | INFO     |   Source CSV row count: 4,200,000
+2026-08-06 12:40:19 | INFO     |   Truncated insight360.fact_sales before load
+2026-08-06 12:40:19 | ERROR    |   ERROR loading fact_sales: column "net_sales_amount" of relation "fact_sales" does not exist
+
+2026-08-06 12:40:19 | ERROR    |   Transaction rolled back for fact_sales (elapsed 0.62s)
+2026-08-06 12:40:19 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:19 | INFO     | Loading fact_returns.csv -> insight360.fact_returns
+2026-08-06 12:40:20 | INFO     |   Source CSV row count: 220,000
+2026-08-06 12:40:20 | INFO     |   Truncated insight360.fact_returns before load
+2026-08-06 12:40:25 | ERROR    |   ERROR loading fact_returns: insert or update on table "fact_returns" violates foreign key constraint "fk_fact_returns_sales"
+DETAIL:  Key (original_sales_id)=(SL-20240401-0002797) is not present in table "fact_sales".
+
+2026-08-06 12:40:25 | ERROR    |   Transaction rolled back for fact_returns (elapsed 5.31s)
+2026-08-06 12:40:25 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:25 | INFO     | Loading fact_inventory_snapshot.csv -> insight360.fact_inventory_snapshot
+2026-08-06 12:40:26 | INFO     |   Source CSV row count: 968,188
+2026-08-06 12:40:26 | INFO     |   Truncated insight360.fact_inventory_snapshot before load
+2026-08-06 12:40:31 | ERROR    |   ERROR loading fact_inventory_snapshot: insert or update on table "fact_inventory_snapshot" violates foreign key constraint "fk_fact_inventory_date"
+DETAIL:  Key (date_key)=(2024-04-07) is not present in table "dim_date".
+
+2026-08-06 12:40:31 | ERROR    |   Transaction rolled back for fact_inventory_snapshot (elapsed 5.30s)
+2026-08-06 12:40:31 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:40:31 | INFO     | Loading fact_staffing.csv -> insight360.fact_staffing
+2026-08-06 12:40:31 | INFO     |   Source CSV row count: 11,128
+2026-08-06 12:40:31 | INFO     |   Truncated insight360.fact_staffing before load
+2026-08-06 12:40:31 | ERROR    |   ERROR loading fact_staffing: insert or update on table "fact_staffing" violates foreign key constraint "fk_fact_staffing_date"
+DETAIL:  Key (date_key)=(2025-04-07) is not present in table "dim_date".
+
+2026-08-06 12:40:31 | ERROR    |   Transaction rolled back for fact_staffing (elapsed 0.19s)
+2026-08-06 12:40:31 | INFO     | Database connection closed.
+2026-08-06 12:40:31 | INFO     | ======================================================================
+2026-08-06 12:40:31 | INFO     | LOAD SUMMARY
+2026-08-06 12:40:31 | INFO     | ======================================================================
+2026-08-06 12:40:31 | INFO     | Table                       Status            CSV Rows       DB Rows  Time (s)
+2026-08-06 12:40:31 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:40:31 | INFO     | dim_date                    FAILED                 730             0      0.12
+2026-08-06 12:40:31 | INFO     | dim_store                   FAILED                 216             0      0.08
+2026-08-06 12:40:31 | INFO     | dim_product                 FAILED               4,200             0      0.10
+2026-08-06 12:40:31 | INFO     | dim_customer                FAILED             850,000             0      0.64
+2026-08-06 12:40:31 | INFO     | fact_sales                  FAILED           4,200,000             0      0.62
+2026-08-06 12:40:31 | INFO     | fact_returns                FAILED             220,000             0      5.31
+2026-08-06 12:40:31 | INFO     | fact_inventory_snapshot     FAILED             968,188             0      5.30
+2026-08-06 12:40:31 | INFO     | fact_staffing               FAILED              11,128             0      0.19
+2026-08-06 12:40:31 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:40:31 | INFO     | TOTAL                                                              0     12.37
+2026-08-06 12:40:31 | INFO     | ======================================================================
+2026-08-06 12:40:31 | WARNING  | ONE OR MORE TABLES FAILED OR HAVE ROW COUNT MISMATCHES.
+2026-08-06 12:40:31 | WARNING  | Review the log above and re-run failed tables as needed.
+2026-08-06 12:40:31 | INFO     | Total run time: 20.45s
+2026-08-06 12:42:27 | INFO     | ======================================================================
+2026-08-06 12:42:27 | INFO     | Insight360 Phase 4 — Data Load Starting
+2026-08-06 12:42:27 | INFO     | Data directory: C:\Users\madhu\Downloads\Insight360-BI-Platform
+2026-08-06 12:42:27 | INFO     | Target schema : insight360
+2026-08-06 12:42:27 | INFO     | ======================================================================
+2026-08-06 12:42:27 | INFO     | Connected to database 'insight360_db' on 127.0.0.1:5432 as user 'postgres'
+2026-08-06 12:42:27 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:27 | INFO     | Loading dim_date.csv -> insight360.dim_date
+2026-08-06 12:42:27 | INFO     |   Source CSV row count: 730
+2026-08-06 12:42:27 | INFO     |   Truncated insight360.dim_date before load
+2026-08-06 12:42:27 | ERROR    |   ERROR loading dim_date: column "fiscal_year" of relation "dim_date" does not exist
+
+2026-08-06 12:42:27 | ERROR    |   Transaction rolled back for dim_date (elapsed 0.08s)
+2026-08-06 12:42:27 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:27 | INFO     | Loading dim_store.csv -> insight360.dim_store
+2026-08-06 12:42:27 | INFO     |   Source CSV row count: 216
+2026-08-06 12:42:27 | INFO     |   Truncated insight360.dim_store before load
+2026-08-06 12:42:27 | ERROR    |   ERROR loading dim_store: column "sqft" of relation "dim_store" does not exist
+
+2026-08-06 12:42:27 | ERROR    |   Transaction rolled back for dim_store (elapsed 0.09s)
+2026-08-06 12:42:27 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:27 | INFO     | Loading dim_product.csv -> insight360.dim_product
+2026-08-06 12:42:27 | INFO     |   Source CSV row count: 4,200
+2026-08-06 12:42:27 | INFO     |   Truncated insight360.dim_product before load
+2026-08-06 12:42:27 | ERROR    |   ERROR loading dim_product: column "sku_name" of relation "dim_product" does not exist
+
+2026-08-06 12:42:27 | ERROR    |   Transaction rolled back for dim_product (elapsed 0.08s)
+2026-08-06 12:42:27 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:27 | INFO     | Loading dim_customer.csv -> insight360.dim_customer
+2026-08-06 12:42:28 | INFO     |   Source CSV row count: 850,000
+2026-08-06 12:42:29 | INFO     |   Truncated insight360.dim_customer before load
+2026-08-06 12:42:29 | ERROR    |   ERROR loading dim_customer: column "loyalty_id" of relation "dim_customer" does not exist
+
+2026-08-06 12:42:29 | ERROR    |   Transaction rolled back for dim_customer (elapsed 0.63s)
+2026-08-06 12:42:29 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:29 | INFO     | Loading fact_sales.csv -> insight360.fact_sales
+2026-08-06 12:42:35 | INFO     |   Source CSV row count: 4,200,000
+2026-08-06 12:42:36 | INFO     |   Truncated insight360.fact_sales before load
+2026-08-06 12:42:36 | ERROR    |   ERROR loading fact_sales: column "net_sales_amount" of relation "fact_sales" does not exist
+
+2026-08-06 12:42:36 | ERROR    |   Transaction rolled back for fact_sales (elapsed 0.69s)
+2026-08-06 12:42:36 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:36 | INFO     | Loading fact_returns.csv -> insight360.fact_returns
+2026-08-06 12:42:36 | INFO     |   Source CSV row count: 220,000
+2026-08-06 12:42:36 | INFO     |   Truncated insight360.fact_returns before load
+2026-08-06 12:42:43 | ERROR    |   ERROR loading fact_returns: insert or update on table "fact_returns" violates foreign key constraint "fk_fact_returns_sales"
+DETAIL:  Key (original_sales_id)=(SL-20240401-0002797) is not present in table "fact_sales".
+
+2026-08-06 12:42:43 | ERROR    |   Transaction rolled back for fact_returns (elapsed 6.76s)
+2026-08-06 12:42:43 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:43 | INFO     | Loading fact_inventory_snapshot.csv -> insight360.fact_inventory_snapshot
+2026-08-06 12:42:44 | INFO     |   Source CSV row count: 968,188
+2026-08-06 12:42:44 | INFO     |   Truncated insight360.fact_inventory_snapshot before load
+2026-08-06 12:42:51 | ERROR    |   ERROR loading fact_inventory_snapshot: insert or update on table "fact_inventory_snapshot" violates foreign key constraint "fk_fact_inventory_date"
+DETAIL:  Key (date_key)=(2024-04-07) is not present in table "dim_date".
+
+2026-08-06 12:42:51 | ERROR    |   Transaction rolled back for fact_inventory_snapshot (elapsed 6.45s)
+2026-08-06 12:42:51 | INFO     | ----------------------------------------------------------------------
+2026-08-06 12:42:51 | INFO     | Loading fact_staffing.csv -> insight360.fact_staffing
+2026-08-06 12:42:51 | INFO     |   Source CSV row count: 11,128
+2026-08-06 12:42:51 | INFO     |   Truncated insight360.fact_staffing before load
+2026-08-06 12:42:51 | ERROR    |   ERROR loading fact_staffing: insert or update on table "fact_staffing" violates foreign key constraint "fk_fact_staffing_date"
+DETAIL:  Key (date_key)=(2025-04-07) is not present in table "dim_date".
+
+2026-08-06 12:42:51 | ERROR    |   Transaction rolled back for fact_staffing (elapsed 0.22s)
+2026-08-06 12:42:51 | INFO     | Database connection closed.
+2026-08-06 12:42:51 | INFO     | ======================================================================
+2026-08-06 12:42:51 | INFO     | LOAD SUMMARY
+2026-08-06 12:42:51 | INFO     | ======================================================================
+2026-08-06 12:42:51 | INFO     | Table                       Status            CSV Rows       DB Rows  Time (s)
+2026-08-06 12:42:51 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:42:51 | INFO     | dim_date                    FAILED                 730             0      0.08
+2026-08-06 12:42:51 | INFO     | dim_store                   FAILED                 216             0      0.09
+2026-08-06 12:42:51 | INFO     | dim_product                 FAILED               4,200             0      0.08
+2026-08-06 12:42:51 | INFO     | dim_customer                FAILED             850,000             0      0.63
+2026-08-06 12:42:51 | INFO     | fact_sales                  FAILED           4,200,000             0      0.69
+2026-08-06 12:42:51 | INFO     | fact_returns                FAILED             220,000             0      6.76
+2026-08-06 12:42:51 | INFO     | fact_inventory_snapshot     FAILED             968,188             0      6.45
+2026-08-06 12:42:51 | INFO     | fact_staffing               FAILED              11,128             0      0.22
+2026-08-06 12:42:51 | INFO     | ------------------------------------------------------------------------------
+2026-08-06 12:42:51 | INFO     | TOTAL                                                              0     15.00
+2026-08-06 12:42:51 | INFO     | ======================================================================
+2026-08-06 12:42:51 | WARNING  | ONE OR MORE TABLES FAILED OR HAVE ROW COUNT MISMATCHES.
+2026-08-06 12:42:51 | WARNING  | Review the log above and re-run failed tables as needed.
+2026-08-06 12:42:51 | INFO     | Total run time: 24.01s
