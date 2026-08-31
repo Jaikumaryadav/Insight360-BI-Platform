@@ -31,32 +31,6 @@ An executive-grade retail analytics dashboard developed in **Microsoft Power BI*
 
 ---
 
-## 🛠️ Data Architecture & Star Schema
-
-The project utilizes an optimized **Star Schema** data model for fast DAX query evaluation and seamless cross-filtering:
-
-              ┌──────────────────────┐
-              │       dim_date       │
-              └──────────┬───────────┘
-                         │
- ┌───────────────────────┼───────────────────────┐
- │                       │                       │
-┌────┴───────────────┐ ┌─────┴──────────────┐ ┌─────┴─────────────────┐
-│     dim_store      │ │     dim_product    │ │   dim_campaign / cust │
-└────┬───────────────┘ └─────┬──────────────┘ └─────┬─────────────────┘
-│                       │                      │
-├───────────────────────┼──────────────────────┤
-│                       │                      │
-┌────┴──────────────┐ ┌──────┴──────────────┐ ┌─────┴─────────────────┐
-│    fact_sales     │ │    fact_returns     │ │fact_inventory_snapshot│
-└───────────────────┘ └─────────────────────┘ └───────────────────────┘
-
-
-* **Fact Tables:** `fact_sales`, `fact_returns`, `fact_inventory_snapshot`, `fact_staffing`
-* **Dimension Tables:** `dim_date`, `dim_product`, `dim_store`, `dim_customer`, `dim_campaign`
-
----
-
 ## 📊 Key Visualizations & Analytics Features
 
 1. **Executive KPI Strip:** Formatted cards displaying top-line financial and risk indicators.
